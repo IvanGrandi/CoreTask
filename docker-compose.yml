@@ -17,7 +17,7 @@ services:
       SPRING_H2_CONSOLE_ENABLED: ${SPRING_H2_CONSOLE_ENABLED:-true}
       SPRING_JPA_HIBERNATE_DDL_AUTO: ${SPRING_JPA_HIBERNATE_DDL_AUTO:-update}
       SPRING_JPA_DATABASE_PLATFORM: ${SPRING_JPA_DATABASE_PLATFORM:-org.hibernate.dialect.H2Dialect}
-    
+    restart: unless-stopped  
   core-task-gateway:
     container_name: core-task-gateway
     image: core-task-gateway:latest

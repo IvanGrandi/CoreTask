@@ -19,6 +19,7 @@ services:
       SPRING_JPA_DATABASE_PLATFORM: ${SPRING_JPA_DATABASE_PLATFORM:-org.hibernate.dialect.H2Dialect}
     networks:
       - nginx-proxy-network
+    restart: unless-stopped
     
   core-task-gateway:
     container_name: core-task-gateway
